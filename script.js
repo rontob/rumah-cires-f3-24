@@ -6,90 +6,68 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =============================
-       FADE UP ANIMATION
+       SCROLL ANIMATION
     ============================== */
 
-    const observer = new IntersectionObserver((entries)=>{
+    const observer = new IntersectionObserver((entries) => {
 
-        entries.forEach(entry=>{
+        entries.forEach(entry => {
 
-            if(entry.isIntersecting){
-
+            if (entry.isIntersecting) {
                 entry.target.classList.add("show");
-
+                observer.unobserve(entry.target);
             }
 
         });
 
-    },{
-
-        threshold:0.15
-
+    }, {
+        threshold: 0.15
     });
 
-    document.querySelectorAll(".section,.item,.feature-item,.gallery img,.spec-card div,.video-box,.map,.cta")
-    .forEach(el=>{
+    document.querySelectorAll(
+        ".section, .item, .feature-item, .gallery-item, .spec-card div, .video-box, .map, .cta"
+    ).forEach(el => {
 
         el.classList.add("hidden");
-
         observer.observe(el);
 
     });
 
-const header=document.querySelector(".header");
-
-if(header){
-
-    window.addEventListener("scroll",()=>{
-
-        ...
-
-    });
-
-}
 
     /* =============================
        NAVBAR SHADOW
     ============================== */
 
-    const header=document.querySelector(".header");
+    const header = document.querySelector(".header");
 
-    window.addEventListener("scroll",()=>{
+    window.addEventListener("scroll", () => {
 
-        if(window.scrollY>15){
+        if (!header) return;
 
-            header.style.boxShadow="0 10px 25px rgba(0,0,0,.12)";
-
-        }
-
-        else{
-
-            header.style.boxShadow="none";
-
-        }
+        header.style.boxShadow =
+            window.scrollY > 15
+                ? "0 10px 25px rgba(0,0,0,.12)"
+                : "0 2px 10px rgba(0,0,0,.05)";
 
     });
-
 
 
     /* =============================
        SMOOTH SCROLL
     ============================== */
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-        anchor.addEventListener("click",function(e){
+        anchor.addEventListener("click", function (e) {
 
-            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
 
-            const target=document.querySelector(this.getAttribute("href"));
+            if (target) {
 
-            if(target){
+                e.preventDefault();
 
                 target.scrollIntoView({
-
-                    behavior:"smooth"
-
+                    behavior: "smooth"
                 });
 
             }
@@ -99,28 +77,26 @@ if(header){
     });
 
 
-
     /* =============================
-       LAZY YOUTUBE
+       LAZY LOAD YOUTUBE
     ============================== */
 
-    const iframe=document.querySelector(".video-box iframe");
+    const iframe = document.querySelector(".video-box iframe");
 
-    if(iframe){
+    if (iframe) {
 
-        const src=iframe.getAttribute("src");
+        const src = iframe.getAttribute("src");
 
         iframe.removeAttribute("src");
 
-        const io=new IntersectionObserver(entries=>{
+        const videoObserver = new IntersectionObserver(entries => {
 
-            entries.forEach(entry=>{
+            entries.forEach(entry => {
 
-                if(entry.isIntersecting){
+                if (entry.isIntersecting) {
 
-                    iframe.src=src;
-
-                    io.disconnect();
+                    iframe.src = src;
+                    videoObserver.disconnect();
 
                 }
 
@@ -128,49 +104,103 @@ if(header){
 
         });
 
-        io.observe(iframe);
+        videoObserver.observe(iframe);
 
     }
 
 
+    /* =============================
+       ACTIVE MENU
+    ============================== */
 
-// ==========================
-// LIGHTBOX GALERI
-// ==========================
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll('.navbar a[href^="#"]');
 
-function openImage(src){
+    window.addEventListener("scroll", () => {
 
-    document.getElementById("modalImg").src = src;
+        let current = "";
 
-}
+        sections.forEach(section => {
 
-function closeImage(){
+            const top = section.offsetTop - 120;
 
-    document.getElementById("imageModal").style.display = "none";
+            if (window.scrollY >= top) {
+                current = section.id;
+            }
 
-}
+        });
 
-document.getElementById("imageModal").addEventListener("click", function(e){
+        navLinks.forEach(link => {
 
-    if(e.target.id==="imageModal"){
+            link.classList.remove("active");
 
-        closeImage();
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
 
-    }
+        });
+
+    });
 
 });
-const modal=document.getElementById("imageModal");
 
-if(modal){
 
-    modal.addEventListener("click",function(e){
+/* =============================
+   LIGHTBOX GALERI
+============================= */
 
-        if(e.target===modal){
+function openImage(src) {
 
+    const modal = document.getElementById("imageModal");
+    const img = document.getElementById("modalImg");
+
+    if (!modal || !img) return;
+
+    img.src = src;
+    modal.style.display = "flex";
+
+}
+
+function closeImage() {
+
+    const modal = document.getElementById("imageModal");
+
+    if (modal) {
+        modal.style.display = "none";
+    }
+
+}
+
+
+/* =============================
+   TUTUP LIGHTBOX
+============================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const modal = document.getElementById("imageModal");
+
+    if (!modal) return;
+
+    modal.addEventListener("click", function (e) {
+
+        if (e.target === modal) {
             closeImage();
-
         }
 
     });
 
-}
+});
+
+
+/* =============================
+   TOMBOL ESC
+============================= */
+
+document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape") {
+        closeImage();
+    }
+
+});
