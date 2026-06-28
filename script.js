@@ -201,3 +201,30 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+// ==========================
+// LIGHTBOX GALERI
+// ==========================
+
+function openImage(src){
+
+    document.getElementById("modalImg").src = src;
+
+    document.getElementById("imageModal").style.display = "flex";
+
+}
+
+function closeImage(){
+
+    document.getElementById("imageModal").style.display = "none";
+
+}
+
+document.getElementById("imageModal").addEventListener("click", function(e){
+
+    if(e.target.id==="imageModal"){
+
+        closeImage();
+
+    }
+
+});
