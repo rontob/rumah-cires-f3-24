@@ -2,34 +2,62 @@
 <html lang="id">
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Rumah Dijual | Siap Huni</title>
+    <title>Rumah Dijual | Hunian Modern Siap Huni</title>
 
-<meta name="description"
-content="Rumah siap huni lokasi strategis. Bisa KPR, SHM, bebas banjir.">
+    <meta name="description"
+          content="Rumah modern minimalis siap huni. Lokasi strategis, SHM, bisa KPR, dekat sekolah, rumah sakit dan pintu tol.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="keywords"
+          content="Rumah Dijual,Rumah Minimalis,Rumah Modern,Rumah KPR,Rumah SHM">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Rumah Modern Siap Huni">
+    <meta property="og:description" content="Hunian nyaman untuk keluarga dengan lokasi strategis.">
+    <meta property="og:image" content="images/hero.jpg">
+    <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
+
+<!-- ================= NAVBAR ================= -->
 
 <header>
 
 <nav class="navbar">
 
 <div class="logo">
-RUMAHKU
+
+<img src="images/logo.png" alt="Logo">
+
+<span>Rumah Impian</span>
+
 </div>
 
-<ul>
+<ul class="menu">
+
+<li><a href="#home">Home</a></li>
 
 <li><a href="#spesifikasi">Spesifikasi</a></li>
 
@@ -39,23 +67,46 @@ RUMAHKU
 
 <li><a href="#faq">FAQ</a></li>
 
+<li><a href="#kontak">Kontak</a></li>
+
 </ul>
 
-<a href="#" class="btn-nav">
+<div class="nav-button">
+
+<a href="https://wa.me/6281234567890"
+class="btn-nav">
+
+<i class="fab fa-whatsapp"></i>
+
 Hubungi Kami
+
 </a>
+
+</div>
+
+<div class="hamburger">
+
+<i class="fas fa-bars"></i>
+
+</div>
 
 </nav>
 
-<section class="hero">
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
 
 <div class="overlay"></div>
 
-<div class="hero-content">
+<div class="container hero-wrapper">
+
+<div class="hero-left" data-aos="fade-right">
 
 <span class="badge">
 
-RUMAH SIAP HUNI
+🔥 Rumah Ready Stock
 
 </span>
 
@@ -63,45 +114,119 @@ RUMAH SIAP HUNI
 
 Rumah Modern Minimalis
 
-Lokasi Strategis
-
-Harga Terbaik
+Untuk Keluarga Masa Kini
 
 </h1>
 
 <p>
 
-Hunian nyaman untuk keluarga,
-
-dekat tol, sekolah,
-
+Hunian eksklusif dengan desain modern,
+lingkungan nyaman,
+akses mudah ke tol,
+sekolah,
 rumah sakit,
-
-dan pusat perbelanjaan.
+pusat perbelanjaan,
+dan transportasi umum.
 
 </p>
 
-<div class="price">
+<div class="price-box">
 
-Mulai
+<label>Mulai dari</label>
 
-<strong>Rp850 Juta</strong>
+<h2>
+
+Rp 850 Juta
+
+</h2>
 
 </div>
 
 <div class="hero-button">
 
-<a href="#" class="btn-primary">
+<a href="https://wa.me/6281234567890"
+
+class="btn-primary">
+
+<i class="fab fa-whatsapp"></i>
 
 Chat WhatsApp
 
 </a>
 
-<a href="#" class="btn-secondary">
+<a href="#booking"
 
-Jadwalkan Survey
+class="btn-secondary">
+
+<i class="fa-solid fa-calendar-days"></i>
+
+Booking Survey
 
 </a>
+
+</div>
+
+<div class="hero-feature">
+
+<div>
+
+<i class="fa-solid fa-certificate"></i>
+
+SHM
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-house"></i>
+
+Siap Huni
+
+</div>
+
+<div>
+
+<i class="fa-solid fa-building-columns"></i>
+
+Bisa KPR
+
+</div>
+
+</div>
+
+</div>
+
+<div class="hero-right"
+
+data-aos="zoom-in">
+
+<div class="swiper heroSwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+
+<img src="images/hero1.jpg">
+
+</div>
+
+<div class="swiper-slide">
+
+<img src="images/hero2.jpg">
+
+</div>
+
+<div class="swiper-slide">
+
+<img src="images/hero3.jpg">
+
+</div>
+
+</div>
+
+<div class="swiper-pagination"></div>
+
+</div>
 
 </div>
 
@@ -109,117 +234,69 @@ Jadwalkan Survey
 
 </section>
 
-</header>
+<!-- ================= QUICK INFO ================= -->
 
-<section id="spesifikasi">
+<section class="quick-info">
 
-<h2>Spesifikasi Rumah</h2>
+<div class="container">
 
-<div class="spec-grid">
+<div class="info-card">
 
-<div class="card">
-Luas Tanah
+<i class="fa-solid fa-ruler-combined"></i>
+
 <h3>120 m²</h3>
+
+<p>Luas Tanah</p>
+
 </div>
 
-<div class="card">
-Luas Bangunan
+<div class="info-card">
+
+<i class="fa-solid fa-house"></i>
+
 <h3>95 m²</h3>
+
+<p>Luas Bangunan</p>
+
 </div>
 
-<div class="card">
-Kamar Tidur
+<div class="info-card">
+
+<i class="fa-solid fa-bed"></i>
+
 <h3>3</h3>
+
+<p>Kamar Tidur</p>
+
 </div>
 
-<div class="card">
-Kamar Mandi
+<div class="info-card">
+
+<i class="fa-solid fa-bath"></i>
+
 <h3>2</h3>
-</div>
 
-<div class="card">
-Carport
-<h3>2 Mobil</h3>
-</div>
-
-<div class="card">
-Legalitas
-<h3>SHM</h3>
-</div>
+<p>Kamar Mandi</p>
 
 </div>
 
-</section>
+<div class="info-card">
 
-<section id="gallery">
+<i class="fa-solid fa-car"></i>
 
-<h2>Galeri Rumah</h2>
+<h3>2</h3>
 
-<div class="gallery">
-
-<img src="images/1.jpg">
-
-<img src="images/2.jpg">
-
-<img src="images/3.jpg">
-
-<img src="images/4.jpg">
-
-<img src="images/5.jpg">
-
-<img src="images/6.jpg">
+<p>Carport</p>
 
 </div>
 
-</section>
+<div class="info-card">
 
-<section id="lokasi">
+<i class="fa-solid fa-bolt"></i>
 
-<h2>Lokasi Strategis</h2>
+<h3>2200</h3>
 
-<div class="maps">
-
-<!-- Google Maps -->
-
-</div>
-
-</section>
-
-<section id="faq">
-
-<h2>Pertanyaan Umum</h2>
-
-<div class="faq">
-
-<div class="faq-item">
-
-<h3>
-
-Apakah bisa KPR?
-
-</h3>
-
-<p>
-
-Ya, dapat menggunakan KPR dari berbagai bank.
-
-</p>
-
-</div>
-
-<div class="faq-item">
-
-<h3>
-
-Apakah SHM?
-
-</h3>
-
-<p>
-
-Ya, Sertifikat Hak Milik.
-
-</p>
+<p>Watt</p>
 
 </div>
 
@@ -227,35 +304,4 @@ Ya, Sertifikat Hak Milik.
 
 </section>
 
-<section class="cta">
-
-<h2>
-
-Jangan Sampai Kehabisan
-
-</h2>
-
-<p>
-
-Hubungi kami sekarang juga.
-
-</p>
-
-<a href="#">
-
-WhatsApp Sekarang
-
-</a>
-
-</section>
-
-<footer>
-
-©2026 Rumah Dijual
-
-</footer>
-
-<script src="js/script.js"></script>
-
-</body>
-</html>
+<!-- ====== LANJUT BAGIAN 2 ====== -->
