@@ -91,42 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =============================
-       GALLERY LIGHTBOX
-    ============================== */
-
-    const images=document.querySelectorAll(".gallery img");
-
-    const lightbox=document.createElement("div");
-
-    lightbox.id="lightbox";
-
-    lightbox.innerHTML="<img>";
-
-    document.body.appendChild(lightbox);
-
-    const lightboxImage=lightbox.querySelector("img");
-
-    images.forEach(image=>{
-
-        image.addEventListener("click",()=>{
-
-            lightbox.classList.add("active");
-
-            lightboxImage.src=image.src;
-
-        });
-
-    });
-
-    lightbox.addEventListener("click",()=>{
-
-        lightbox.classList.remove("active");
-
-    });
-
-
-
-    /* =============================
        LAZY YOUTUBE
     ============================== */
 
