@@ -481,3 +481,442 @@ opacity:1;
 transform:translateY(0);
 
 }
+
+/* ======================================================
+   LANDING PAGE RUMAH - STYLE.CSS (BAGIAN 2)
+   Gallery • Video • Feature • Maps • CTA • Footer
+======================================================*/
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+
+}
+
+.gallery img{
+
+    width:100%;
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.04);
+
+}
+
+
+/* =========================
+   VIDEO
+========================= */
+
+.video-box{
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.video-box iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:none;
+
+}
+
+
+/* =========================
+FEATURE
+========================= */
+
+.feature-list{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:15px;
+
+}
+
+.feature-item{
+
+background:#fff;
+
+padding:18px;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+}
+
+.feature-item:hover{
+
+transform:translateY(-4px);
+
+}
+
+.feature-item i{
+
+font-size:24px;
+
+color:var(--secondary);
+
+width:30px;
+
+text-align:center;
+
+}
+
+.feature-item{
+
+font-weight:500;
+
+}
+
+
+/* =========================
+MAP
+========================= */
+
+.map{
+
+overflow:hidden;
+
+border-radius:22px;
+
+box-shadow:var(--shadow);
+
+}
+
+.map iframe{
+
+width:100%;
+
+height:320px;
+
+border:0;
+
+}
+
+
+/* =========================
+CTA
+========================= */
+
+.cta{
+
+margin:40px 18px;
+
+padding:35px 20px;
+
+border-radius:25px;
+
+background:linear-gradient(
+135deg,
+var(--primary),
+#295845
+);
+
+text-align:center;
+
+color:white;
+
+}
+
+.cta h2{
+
+font-size:28px;
+
+margin-bottom:10px;
+
+}
+
+.cta p{
+
+opacity:.9;
+
+margin-bottom:25px;
+
+}
+
+.cta .btn-primary{
+
+display:block;
+
+}
+
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+padding:30px 20px;
+
+text-align:center;
+
+color:#888;
+
+font-size:14px;
+
+}
+
+
+/* =========================
+FLOATING WHATSAPP
+========================= */
+
+.floating-wa{
+
+position:fixed;
+
+right:18px;
+
+bottom:20px;
+
+width:62px;
+
+height:62px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:30px;
+
+color:white;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.25);
+
+z-index:999;
+
+transition:.3s;
+
+animation:waFloat 2s infinite;
+
+}
+
+.floating-wa:hover{
+
+transform:scale(1.08);
+
+}
+
+@keyframes waFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-6px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/* =========================
+SCROLL ANIMATION
+========================= */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:.8s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+/* =========================
+IMAGE EFFECT
+========================= */
+
+img{
+
+transition:.35s;
+
+}
+
+img:hover{
+
+filter:brightness(1.03);
+
+}
+
+
+/* =========================
+SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#eee;
+
+}
+
+
+/* =========================
+TABLET
+========================= */
+
+@media (min-width:768px){
+
+.hero-image{
+
+height:420px;
+
+}
+
+.hero-content{
+
+padding:40px;
+
+}
+
+.hero-content h1{
+
+font-size:48px;
+
+}
+
+.quick-info{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+.spec-card{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.gallery{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.gallery img{
+
+height:220px;
+
+}
+
+}
+
+
+/* =========================
+DESKTOP
+========================= */
+
+@media (min-width:1024px){
+
+body{
+
+max-width:430px;
+
+margin:auto;
+
+background:#ddd;
+
+box-shadow:0 0 40px rgba(0,0,0,.15);
+
+min-height:100vh;
+
+}
+
+.header{
+
+max-width:430px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+}
+
+.floating-wa{
+
+right:calc(50% - 200px);
+
+}
+
+}
