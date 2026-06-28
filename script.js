@@ -36,7 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+const header=document.querySelector(".header");
 
+if(header){
+
+    window.addEventListener("scroll",()=>{
+
+        ...
+
+    });
+
+}
 
     /* =============================
        NAVBAR SHADOW
@@ -124,47 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    /* =============================
-       ACTIVE MENU
-    ============================== */
-
-    const sections=document.querySelectorAll("section");
-
-    const navLinks=document.querySelectorAll(".navbar a");
-
-    window.addEventListener("scroll",()=>{
-
-        let current="";
-
-        sections.forEach(section=>{
-
-            const top=section.offsetTop-100;
-
-            const height=section.clientHeight;
-
-            if(pageYOffset>=top){
-
-                current=section.getAttribute("id");
-
-            }
-
-        });
-
-        navLinks.forEach(link=>{
-
-            link.classList.remove("active");
-
-            if(link.getAttribute("href")==="#"+current){
-
-                link.classList.add("active");
-
-            }
-
-        });
-
-    });
-
-});
 // ==========================
 // LIGHTBOX GALERI
 // ==========================
@@ -172,8 +141,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function openImage(src){
 
     document.getElementById("modalImg").src = src;
-
-    document.getElementById("imageModal").style.display = "flex";
 
 }
 
@@ -192,3 +159,18 @@ document.getElementById("imageModal").addEventListener("click", function(e){
     }
 
 });
+const modal=document.getElementById("imageModal");
+
+if(modal){
+
+    modal.addEventListener("click",function(e){
+
+        if(e.target===modal){
+
+            closeImage();
+
+        }
+
+    });
+
+}
