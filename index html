@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Rumah Dijual | Siap Huni</title>
+
+<meta name="description"
+content="Rumah siap huni lokasi strategis. Bisa KPR, SHM, bebas banjir.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+RUMAHKU
+</div>
+
+<ul>
+
+<li><a href="#spesifikasi">Spesifikasi</a></li>
+
+<li><a href="#gallery">Galeri</a></li>
+
+<li><a href="#lokasi">Lokasi</a></li>
+
+<li><a href="#faq">FAQ</a></li>
+
+</ul>
+
+<a href="#" class="btn-nav">
+Hubungi Kami
+</a>
+
+</nav>
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<span class="badge">
+
+RUMAH SIAP HUNI
+
+</span>
+
+<h1>
+
+Rumah Modern Minimalis
+
+Lokasi Strategis
+
+Harga Terbaik
+
+</h1>
+
+<p>
+
+Hunian nyaman untuk keluarga,
+
+dekat tol, sekolah,
+
+rumah sakit,
+
+dan pusat perbelanjaan.
+
+</p>
+
+<div class="price">
+
+Mulai
+
+<strong>Rp850 Juta</strong>
+
+</div>
+
+<div class="hero-button">
+
+<a href="#" class="btn-primary">
+
+Chat WhatsApp
+
+</a>
+
+<a href="#" class="btn-secondary">
+
+Jadwalkan Survey
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</header>
+
+<section id="spesifikasi">
+
+<h2>Spesifikasi Rumah</h2>
+
+<div class="spec-grid">
+
+<div class="card">
+Luas Tanah
+<h3>120 m²</h3>
+</div>
+
+<div class="card">
+Luas Bangunan
+<h3>95 m²</h3>
+</div>
+
+<div class="card">
+Kamar Tidur
+<h3>3</h3>
+</div>
+
+<div class="card">
+Kamar Mandi
+<h3>2</h3>
+</div>
+
+<div class="card">
+Carport
+<h3>2 Mobil</h3>
+</div>
+
+<div class="card">
+Legalitas
+<h3>SHM</h3>
+</div>
+
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2>Galeri Rumah</h2>
+
+<div class="gallery">
+
+<img src="images/1.jpg">
+
+<img src="images/2.jpg">
+
+<img src="images/3.jpg">
+
+<img src="images/4.jpg">
+
+<img src="images/5.jpg">
+
+<img src="images/6.jpg">
+
+</div>
+
+</section>
+
+<section id="lokasi">
+
+<h2>Lokasi Strategis</h2>
+
+<div class="maps">
+
+<!-- Google Maps -->
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<h2>Pertanyaan Umum</h2>
+
+<div class="faq">
+
+<div class="faq-item">
+
+<h3>
+
+Apakah bisa KPR?
+
+</h3>
+
+<p>
+
+Ya, dapat menggunakan KPR dari berbagai bank.
+
+</p>
+
+</div>
+
+<div class="faq-item">
+
+<h3>
+
+Apakah SHM?
+
+</h3>
+
+<p>
+
+Ya, Sertifikat Hak Milik.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+
+Jangan Sampai Kehabisan
+
+</h2>
+
+<p>
+
+Hubungi kami sekarang juga.
+
+</p>
+
+<a href="#">
+
+WhatsApp Sekarang
+
+</a>
+
+</section>
+
+<footer>
+
+©2026 Rumah Dijual
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
