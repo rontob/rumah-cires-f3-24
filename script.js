@@ -204,3 +204,61 @@ document.addEventListener("keydown", (e) => {
     }
 
 });
+
+/* =============================
+   SHARE WEBSITE
+============================= */
+
+const pageURL = window.location.href;
+
+const pageTitle =
+"Rumah Dijual Cinere Residence | SHM | 3 KT | Rp850 Juta";
+
+const shareText =
+"Cek rumah dijual siap huni di Cinere Residence.\n\n";
+
+const wa = document.getElementById("shareWhatsapp");
+
+if(wa){
+
+    wa.href =
+    "https://wa.me/?text=" +
+    encodeURIComponent(
+        shareText + pageTitle + "\n" + pageURL
+    );
+
+}
+
+const fb = document.getElementById("shareFacebook");
+
+if(fb){
+
+    fb.href =
+    "https://www.facebook.com/sharer/sharer.php?u=" +
+    encodeURIComponent(pageURL);
+
+    fb.target = "_blank";
+
+}
+
+const copy = document.getElementById("copyLink");
+
+if(copy){
+
+    copy.addEventListener("click", async ()=>{
+
+        try{
+
+            await navigator.clipboard.writeText(pageURL);
+
+            alert("Link berhasil disalin.");
+
+        }catch{
+
+            prompt("Salin link berikut:", pageURL);
+
+        }
+
+    });
+
+}
